@@ -132,7 +132,7 @@ function createRandomHeart() {
 
 function goToNext() {
     // Navigate to celebration page
-    window.location.href = 'celebrate.html';
+    window.location.href = 'http://anya25thbirthday.me/celebrate.html';
 }
 
 // Add CSS for heart burst animation
