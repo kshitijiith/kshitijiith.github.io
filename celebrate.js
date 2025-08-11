@@ -87,25 +87,44 @@ function addSparkleEffects() {
     }, 1000); // Sparkles every second
 }
 
+let celebrationCount = 0;
+
 function celebrateMore() {
+    celebrationCount++;
+    
     // Create massive burst of love effects
     createMassiveLoveBurst();
     
     // Change button text
     const btn = document.querySelector('.celebrate-button');
-    btn.innerHTML = '💕 Amazing! 💕';
-    btn.style.animation = 'none';
-    btn.style.transform = 'scale(1.1)';
     
-    setTimeout(() => {
-        btn.innerHTML = '🎉 Celebrate 🎉';
-        btn.style.animation = 'buttonPulse 2s infinite';
-        btn.style.transform = 'scale(1)';
-    }, 2000);
+    if (celebrationCount === 1) {
+        btn.innerHTML = '💕 Amazing! 💕';
+        btn.style.animation = 'none';
+        btn.style.transform = 'scale(1.1)';
+        
+        setTimeout(() => {
+            btn.innerHTML = '� Let\'s Cut the Cake! �';
+            btn.style.animation = 'buttonPulse 2s infinite';
+            btn.style.transform = 'scale(1)';
+        }, 2000);
+    } else {
+        // Navigate to cake page after second click
+        btn.innerHTML = '🎂 Going to Cake! 🎂';
+        btn.style.transform = 'scale(1.1)';
+        
+        setTimeout(() => {
+            window.location.href = 'http://anya25thbirthday.me/cake.html';
+        }, 1000);
+    }
     
     // Add special message
     setTimeout(() => {
-        showSpecialMessage();
+        if (celebrationCount === 1) {
+            showSpecialMessage();
+        } else {
+            showCakeMessage();
+        }
     }, 1000);
     
     // Create extra heart shower
@@ -183,6 +202,62 @@ function showSpecialMessage() {
     specialDiv.style.zIndex = '1000';
     specialDiv.style.animation = 'slideDown 0.5s ease-out';
     specialDiv.innerHTML = '🌟 You make every day brighter, Aanuu! 🌟';
+    
+    document.body.appendChild(specialDiv);
+    
+    setTimeout(() => {
+        specialDiv.style.animation = 'slideUp 0.5s ease-in forwards';
+        setTimeout(() => {
+            if (specialDiv.parentNode) {
+                specialDiv.parentNode.removeChild(specialDiv);
+            }
+        }, 500);
+    }, 3000);
+}
+
+function showCakeMessage() {
+    const specialDiv = document.createElement('div');
+    specialDiv.style.position = 'fixed';
+    specialDiv.style.top = '20px';
+    specialDiv.style.left = '50%';
+    specialDiv.style.transform = 'translateX(-50%)';
+    specialDiv.style.background = 'rgba(255, 107, 157, 0.9)';
+    specialDiv.style.color = 'white';
+    specialDiv.style.padding = '15px 30px';
+    specialDiv.style.borderRadius = '20px';
+    specialDiv.style.fontSize = '16px';
+    specialDiv.style.textAlign = 'center';
+    specialDiv.style.zIndex = '1000';
+    specialDiv.style.animation = 'slideDown 0.5s ease-out';
+    specialDiv.innerHTML = '🎂 Time to make a wish and cut the cake! 🎂';
+    
+    document.body.appendChild(specialDiv);
+    
+    setTimeout(() => {
+        specialDiv.style.animation = 'slideUp 0.5s ease-in forwards';
+        setTimeout(() => {
+            if (specialDiv.parentNode) {
+                specialDiv.parentNode.removeChild(specialDiv);
+            }
+        }, 500);
+    }, 3000);
+}
+
+function showCakeMessage() {
+    const specialDiv = document.createElement('div');
+    specialDiv.style.position = 'fixed';
+    specialDiv.style.top = '20px';
+    specialDiv.style.left = '50%';
+    specialDiv.style.transform = 'translateX(-50%)';
+    specialDiv.style.background = 'rgba(255, 107, 157, 0.9)';
+    specialDiv.style.color = 'white';
+    specialDiv.style.padding = '15px 30px';
+    specialDiv.style.borderRadius = '20px';
+    specialDiv.style.fontSize = '16px';
+    specialDiv.style.textAlign = 'center';
+    specialDiv.style.zIndex = '1000';
+    specialDiv.style.animation = 'slideDown 0.5s ease-out';
+    specialDiv.innerHTML = '🎂 Time to make a wish and cut the cake! 🎂';
     
     document.body.appendChild(specialDiv);
     

@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffeef7 0%, #f8bbd9 50%, #f48fb1 100%);
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.cake-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* Heart Rain Animation */
+.heart-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heart-drop {
+    position: absolute;
+    top: -50px;
+    font-size: 22px;
+    animation: heartFall 4s infinite linear;
+    opacity: 0.8;
+}
+
+.heart-drop:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+    animation-duration: 4s;
+}
+
+.heart-drop:nth-child(2) {
+    left: 12%;
+    animation-delay: 0.3s;
+    animation-duration: 3.5s;
+}
+
+.heart-drop:nth-child(3) {
+    left: 18%;
+    animation-delay: 0.6s;
+    animation-duration: 4.5s;
+}
+
+.heart-drop:nth-child(4) {
+    left: 25%;
+    animation-delay: 0.9s;
+    animation-duration: 3.8s;
+}
+
+.heart-drop:nth-child(5) {
+    left: 32%;
+    animation-delay: 1.2s;
+    animation-duration: 4.2s;
+}
+
+.heart-drop:nth-child(6) {
+    left: 38%;
+    animation-delay: 1.5s;
+    animation-duration: 3.9s;
+}
+
+.heart-drop:nth-child(7) {
+    left: 45%;
+    animation-delay: 1.8s;
+    animation-duration: 4.1s;
+}
+
+.heart-drop:nth-child(8) {
+    left: 52%;
+    animation-delay: 2.1s;
+    animation-duration: 3.7s;
+}
+
+.heart-drop:nth-child(9) {
+    left: 58%;
+    animation-delay: 2.4s;
+    animation-duration: 4.3s;
+}
+
+.heart-drop:nth-child(10) {
+    left: 65%;
+    animation-delay: 2.7s;
+    animation-duration: 3.6s;
+}
+
+.heart-drop:nth-child(11) {
+    left: 72%;
+    animation-delay: 0.2s;
+    animation-duration: 4.4s;
+}
+
+.heart-drop:nth-child(12) {
+    left: 78%;
+    animation-delay: 0.5s;
+    animation-duration: 3.9s;
+}
+
+.heart-drop:nth-child(13) {
+    left: 85%;
+    animation-delay: 0.8s;
+    animation-duration: 4.1s;
+}
+
+.heart-drop:nth-child(14) {
+    left: 92%;
+    animation-delay: 1.1s;
+    animation-duration: 3.8s;
+}
+
+.heart-drop:nth-child(15) {
+    left: 95%;
+    animation-delay: 1.4s;
+    animation-duration: 4.0s;
+}
+
+@keyframes heartFall {
+    0% {
+        top: -50px;
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
+/* Title Styling */
+.cake-title {
+    text-align: center;
+    margin-bottom: 40px;
+    z-index: 10;
+}
+
+.cake-title h1 {
+    font-size: 3rem;
+    color: #d81b60;
+    text-shadow: 
+        0 0 5px #d81b60,
+        0 0 10px #d81b60,
+        0 0 15px #f48fb1;
+    margin-bottom: 15px;
+    animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+.instruction {
+    font-size: 1.2rem;
+    color: #ad1457;
+    text-shadow: 0 0 3px #f48fb1;
+    animation: instructionPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+    0% {
+        filter: brightness(1);
+    }
+    100% {
+        filter: brightness(1.2);
+    }
+}
+
+@keyframes instructionPulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Birthday Cake Styling */
+.birthday-cake {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 40px;
+}
+
+.cake-base {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: cakeFloat 3s ease-in-out infinite;
+}
+
+@keyframes cakeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Birthday Cake Styling */
+.birthday-cake {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 40px;
+}
+
+.cake-base {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: cakeFloat 3s ease-in-out infinite;
+}
+
+.cake-image {
+    width: 300px;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    border-radius: 15px;
+}
+
+@keyframes cakeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.cake-decoration {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.decoration {
+    font-size: 1.5rem;
+    animation: decorationTwinkle 1s ease-in-out infinite alternate;
+}
+
+.decoration:nth-child(2n) {
+    animation-delay: 0.5s;
+}
+
+@keyframes decorationTwinkle {
+    0% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* Candles Styling */
+.candle {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 25;
+    top: -20px;
+}
+
+.candle:hover {
+    transform: scale(1.1);
+}
+
+.candle1 {
+    left: -40px;
+}
+
+.candle2 {
+    left: 40px;
+}
+
+.flame {
+    font-size: 2rem;
+    animation: flameFlicker 0.8s ease-in-out infinite alternate;
+    transition: all 0.5s ease;
+}
+
+.flame.blown-out {
+    opacity: 0;
+    transform: scale(0);
+}
+
+@keyframes flameFlicker {
+    0% {
+        transform: scale(1) rotate(-2deg);
+        filter: brightness(1);
+    }
+    100% {
+        transform: scale(1.05) rotate(2deg);
+        filter: brightness(1.2);
+    }
+}
+
+/* Button and Message Styling */
+.final-button {
+    background: linear-gradient(45deg, #ff6b9d, #ff9a9e);
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 
+        0 8px 20px rgba(255, 107, 157, 0.6),
+        0 0 20px rgba(255, 107, 157, 0.4);
+    transition: all 0.3s ease;
+    animation: buttonAppear 0.5s ease-out, buttonPulse 2s infinite 0.5s;
+    font-weight: bold;
+    z-index: 10;
+    margin-top: 20px;
+}
+
+.final-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 12px 25px rgba(255, 107, 157, 0.8),
+        0 0 30px rgba(255, 107, 157, 0.6);
+}
+
+@keyframes buttonAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.celebration-message {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: messageSlideUp 0.8s ease-out;
+    z-index: 10;
+}
+
+.celebration-message p {
+    font-size: 1.3rem;
+    color: #d81b60;
+    text-shadow: 0 0 5px #f48fb1;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+@keyframes messageSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hidden {
+    opacity: 0 !important;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+/* Blow animation */
+@keyframes blowEffect {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.flame.blowing {
+    animation: blowEffect 0.5s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cake-title h1 {
+        font-size: 2rem;
+    }
+    
+    .instruction {
+        font-size: 1rem;
+    }
+    
+    .layer1 {
+        width: 150px;
+        height: 45px;
+    }
+    
+    .layer2 {
+        width: 120px;
+        height: 38px;
+    }
+    
+    .layer3 {
+        width: 90px;
+        height: 30px;
+    }
+    
+    .final-button {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+    
+    .candle1 {
+        left: -25px;
+    }
+    
+    .candle2 {
+        left: 25px;
+    }
+    
+    .flame {
+        font-size: 1.5rem;
+    }
+}
