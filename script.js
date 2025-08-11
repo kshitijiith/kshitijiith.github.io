@@ -57,7 +57,8 @@ function showSurprise() {
         // Change button text
         const btn = document.getElementById('specialBtn');
         btn.innerHTML = '✨ Amazing! ✨';
-        btn.style.background = 'linear-gradient(45deg, #4facfe, #00f2fe)';
+        btn.style.background = 'linear-gradient(45deg, #ff6b9d, #ff9a9e)';
+        btn.style.color = 'white';
         
         // Show next button after delay
         setTimeout(() => {
@@ -130,9 +131,8 @@ function createRandomHeart() {
 }
 
 function goToNext() {
-    // Placeholder for next page navigation
-    alert('🎉 Next page coming soon! This will be an amazing journey together! 💕');
-    // You can replace this with: window.location.href = 'next-page.html';
+    // Navigate to celebration page
+    window.location.href = 'celebrate.html';
 }
 
 // Add CSS for heart burst animation
