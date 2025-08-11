@@ -282,7 +282,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 25;
-    top: -20px;
+    top: -5px;
 }
 
 .candle:hover {
@@ -290,11 +290,11 @@ body {
 }
 
 .candle1 {
-    left: -40px;
+    left: 105px;
 }
 
 .candle2 {
-    left: 40px;
+    left: 150px;
 }
 
 .flame {

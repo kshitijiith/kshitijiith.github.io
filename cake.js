@@ -16,14 +16,14 @@ function initializeCakePage() {
     });
     
     // Add click listener to final button
-    const finalButton = document.getElementById('finalButton');
+    const finalButton = document.getElementById('finalBtn');
     if (finalButton) {
         finalButton.addEventListener('click', goToFinalPage);
     }
     
     // Hide celebration message and button initially
-    const celebrationMessage = document.getElementById('celebrationMessage');
-    const finalButtonEl = document.getElementById('finalButton');
+    const celebrationMessage = document.getElementById('celebrationMsg');
+    const finalButtonEl = document.getElementById('finalBtn');
     
     if (celebrationMessage) {
         celebrationMessage.classList.add('hidden');
@@ -99,8 +99,8 @@ function createBlowEffect(flameElement) {
 }
 
 function showCelebration() {
-    const celebrationMessage = document.getElementById('celebrationMessage');
-    const finalButton = document.getElementById('finalButton');
+    const celebrationMessage = document.getElementById('celebrationMsg');
+    const finalButton = document.getElementById('finalBtn');
     
     // Show celebration message
     if (celebrationMessage) {
