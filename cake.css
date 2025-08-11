@@ -8,14 +8,16 @@ body {
     background: linear-gradient(135deg, #ffeef7 0%, #f8bbd9 50%, #f48fb1 100%);
     min-height: 100vh;
     font-family: 'Arial', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     position: relative;
 }
 
 .cake-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
