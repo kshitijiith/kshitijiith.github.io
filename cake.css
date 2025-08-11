@@ -427,19 +427,9 @@ body {
         font-size: 1rem;
     }
     
-    .layer1 {
-        width: 150px;
-        height: 45px;
-    }
-    
-    .layer2 {
-        width: 120px;
-        height: 38px;
-    }
-    
-    .layer3 {
-        width: 90px;
-        height: 30px;
+    .cake-image {
+        width: 250px;
+        height: auto;
     }
     
     .final-button {
@@ -448,14 +438,46 @@ body {
     }
     
     .candle1 {
-        left: -25px;
+        left: 85px;
+        top: -5px;
     }
     
     .candle2 {
-        left: 25px;
+        left: 125px;
+        top: -5px;
     }
     
     .flame {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cake-image {
+        width: 200px;
+        height: auto;
+    }
+    
+    .candle1 {
+        left: 70px;
+        top: -3px;
+    }
+    
+    .candle2 {
+        left: 105px;
+        top: -3px;
+    }
+    
+    .flame {
+        font-size: 1.2rem;
+    }
+    
+    .cake-title h1 {
+        font-size: 1.5rem;
+    }
+    
+    .final-button {
+        padding: 12px 25px;
+        font-size: 16px;
     }
 }
