@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First GitHub Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Day 💕</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World! 🚀</h1>
-    <p>This is my GitHub Pages site.</p>
+    <div class="container">
+        <!-- Hearts floating animation -->
+        <div class="hearts">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+
+        <!-- Main message card -->
+        <div class="message-card" id="messageCard">
+            <div class="message" id="message1">
+                🌸 Today is your special day...
+                <br>
+                And you deserve all the happiness in the world
+            </div>
+            <div class="message hidden" id="message2">
+                Happy Birthday, Beautiful! ✨
+                <br>
+                Even if we're just friends, you mean everything to me 💕
+                <br>
+                <small>Hope this brings a smile to your face 😊</small>
+            </div>
+        </div>
+
+        <!-- Cute animated gif area -->
+        <div class="gif-container" id="gifContainer">
+            <img src="source.gif" alt="Cute Panda" class="panda-gif">
+        </div>
+
+        <!-- Special button -->
+        <button class="special-button" id="specialBtn" onclick="showSurprise()">
+            🎁 Click for Surprise
+        </button>
+
+        <!-- Navigation button (hidden initially) -->
+        <button class="next-button hidden" id="nextBtn" onclick="goToNext()">
+            Continue the Journey 💕
+        </button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
