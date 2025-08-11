@@ -104,7 +104,7 @@ function celebrateMore() {
         btn.style.transform = 'scale(1.1)';
         
         setTimeout(() => {
-            btn.innerHTML = '� Let\'s Cut the Cake! �';
+            btn.innerHTML = '🎂 Let\'s Cut the Cake! 🎂';
             btn.style.animation = 'buttonPulse 2s infinite';
             btn.style.transform = 'scale(1)';
         }, 2000);
